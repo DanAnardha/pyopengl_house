@@ -31,14 +31,9 @@ class App:
             for event in pg.event.get():
                 if(event.type == pg.quit):
                     running = False
-            
             glClear(GL_COLOR_BUFFER_BIT)
-
-            # Menggambar bangun rumah
             self.drawHouse()
-
             pg.display.flip()
-
             self.clock.tick(60)
         self.quit()
     
@@ -64,8 +59,6 @@ class App:
     # Function to draw house
     def drawHouse(self):
         glColor3f(1.0 ,1.0 ,1.0)
-        
-        #House
         self.drawRectangle(-30, 230, 178, 95, 178, 35, -30, 125)
         self.drawRectangle(-19, 208, 166, 92, 166, 49, -19, 133)
         self.drawRectangle(-170, 114, -30, 230, -30, 125, -170, 48)
